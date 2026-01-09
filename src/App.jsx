@@ -6,7 +6,6 @@ function App() {
     <>
       <div className='app-container'>
         <Gallery />
-        <Gallery />
       </div>
     </>
   )
