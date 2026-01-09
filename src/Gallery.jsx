@@ -12,15 +12,24 @@ const Gallery = () => {
     if (index < (sculptureList.length - 1)) setIndex(index + 1)
   }
 
+  function handleClickPrev() {
+    if (index > 0) setIndex(index - 1)
+  }
+
   function handleClickMore() {
     setShowMore(!showMore)
   }
 
   return (
     <div className='card'>
-      <button onClick={handleClickNext} >
-        Next
-      </button>
+      <div>
+        <button onClick={handleClickPrev}>
+          Prev
+        </button>
+        <button onClick={handleClickNext} >
+          Next
+        </button>
+      </div>
       <h2>
         <i>{sculpture.name} </i> 
         by {sculpture.artist}
