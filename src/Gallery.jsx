@@ -9,7 +9,7 @@ const Gallery = () => {
   let sculpture = sculptureList[index]
 
   function handleClickNext() {
-    setIndex(index + 1)
+    if (index < (sculptureList.length - 1)) setIndex(index + 1)
   }
 
   function handleClickMore() {
