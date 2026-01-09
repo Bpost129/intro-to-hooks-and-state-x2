@@ -28,10 +28,10 @@ const Gallery = () => {
       <h3>  
         ({index + 1} of {sculptureList.length})
       </h3>
-      <button>
-        Show Details
+      <button onClick={handleClickMore}>
+        {showMore ? 'Hide' : 'Show'} Details
       </button>
-      <p>{sculpture.description}</p>
+      {showMore && <p>{sculpture.description}</p>}
       <img 
         src={sculpture.url} 
         alt={sculpture.alt}
